@@ -45,7 +45,7 @@ for line in sys.stdin:
     system_vars = line.split('\t')
     
     try:
-        if len(system_vars) > 1 and system_vars[3].isnumeric():
+        if len(system_vars) > 1 and system_vars[3].isdigit():
             
             #print('sys vars', system_vars[5])
             #order_number = system_vars[]
