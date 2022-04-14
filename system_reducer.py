@@ -19,9 +19,7 @@ worst_diff = [-1, -1, -1]
 worst_sys = [-1, -1, -1]
 
 #print('initial')
-lines = lines[1:]
-testing_sys = int(lines[0].strip().split(',')[5])
-total_system = testing_sys
+initiated = False
 
 #print('testing initial system', total_system)
 
@@ -48,6 +46,7 @@ for line in sys.stdin:
     
     try:
         if len(system_vars) > 1 and system_vars[3].isnumeric():
+            
             #print('sys vars', system_vars[5])
             #order_number = system_vars[]
             timestamp_day = system_vars[1]
@@ -57,6 +56,9 @@ for line in sys.stdin:
             system = int(system_vars[5])
             age = int(system_vars[6])
             bldg = int(system_vars[7])
+            if !initiated:
+                initiated = True
+                testing_sys = system
             
         else:
             #print('continuing off of else')
