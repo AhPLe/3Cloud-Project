@@ -13,11 +13,11 @@ for line in sys.stdin:
     #print(system_vars)
     if len(system_vars) > 1 and system_vars[2].isdigit():
         #order_number = system_vars[]
-        timestamp_day = system_vars[0]
-        timestamp_hours = system_vars[1]
-        target_temp = system_vars[2]
-        actual_temp = system_vars[3]
-        system = system_vars[4]
+        system = system_vars[0]
+        timestamp_day = system_vars[1]
+        timestamp_hours = system_vars[2]
+        target_temp = system_vars[3]
+        actual_temp = system_vars[4]
         age = system_vars[5]
         bldg = system_vars[6]
         

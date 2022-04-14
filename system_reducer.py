@@ -50,15 +50,15 @@ for line in sys.stdin:
     system_vars = line.split('\t')
     
     try:
-        if len(system_vars) > 1 and system_vars[3].isdigit():
+        if len(system_vars) > 1 and system_vars[0].isdigit():
             
             #print('sys vars', system_vars[5])
             #order_number = system_vars[]
-            timestamp_day = system_vars[0]
-            timestamp_hours = system_vars[1] #pd.Timestamp()
-            target_temp = int(system_vars[2])
-            actual_temp = int(system_vars[3])
-            system = int(system_vars[4])
+            system = int(system_vars[0])
+            timestamp_day = system_vars[1]
+            timestamp_hours = system_vars[2] #pd.Timestamp()
+            target_temp = int(system_vars[3])
+            actual_temp = int(system_vars[4])
             age = int(system_vars[5])
             bldg = int(system_vars[6])
             if not initiated:
