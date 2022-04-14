@@ -7,9 +7,10 @@ import math
 import pandas as pd
 
 def is_between(time, time_range):
-    # if time_range[1] < time_range[0]:
-        # return time >= time_range[0] or time <= time_range[1]
-    return time_range[0] <= time <= time_range[1]
+    hour_time = int(time.split(':')[0])
+    if time_range[1] < time_range[0]:
+        return hour_time >= time_range[0] or time <= time_range[1]
+    return time_range[0] <= hour_time <= time_range[1]
 
 temp_cutoff = 2
 total_system = 0
@@ -18,6 +19,7 @@ measured = False
 
 worst_diff = [-1, -1, -1]
 worst_sys = [-1, -1, -1]
+business_hours = [8, 17]
 
 #print('initial')
 initiated = False
@@ -51,7 +53,7 @@ for line in sys.stdin:
             #print('sys vars', system_vars[5])
             #order_number = system_vars[]
             timestamp_day = system_vars[1]
-            timestamp_hours = pd.Timestamp(system_vars[2])
+            timestamp_hours = system_vars[2] //pd.Timestamp()
             target_temp = int(system_vars[3])
             actual_temp = int(system_vars[4])
             system = int(system_vars[5])
@@ -89,6 +91,9 @@ for line in sys.stdin:
     #if timestamp_hours < datetime.time(8) or timestamp_hours > datetime.time(17):
     #df.timestamp.dt.strftime('%H:%M:%S').between('8:00:00','17:00:00')
     #    current_diff = current_diff * 0.2
+    business_hours = ['8', '17']
+    if not is_between(timestamp_hours, business_hours):
+        current_diff = current_diff * 0.2
     
 
     
@@ -98,6 +103,7 @@ for line in sys.stdin:
     
     #go through years in service
     current_diff = current_diff * 1/(1-0.4*age/30)
+    
     if age > 10:
         current_diff = current_diff*age/10
     
