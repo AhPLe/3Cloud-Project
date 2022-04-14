@@ -2,9 +2,10 @@ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar 
 
 
 
-hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file system_mapper.py -mapper system_mapper.py -file system_reducer.py -reducer system_reducer.py -input CSCI4795input -output py_wc_out_2pm
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file system_mapper.py -mapper system_mapper.py -file system_reducer.py -reducer system_reducer.py -input CSCI4795input -output py_wc_out_2
 
-
+debugging:
+cat CSCI_4795/* | python system_mapper.py | sort | python system_reducer.py 
 
 
 original
@@ -13,3 +14,4 @@ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar 
 
 py_wc_out_14_1 : successful word count
 py_wc_out_2pm : failed compile
+py_wc_out_255
