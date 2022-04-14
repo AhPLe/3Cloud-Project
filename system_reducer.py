@@ -93,7 +93,7 @@ for line in sys.stdin:
     #if timestamp_hours < datetime.time(8) or timestamp_hours > datetime.time(17):
     #df.timestamp.dt.strftime('%H:%M:%S').between('8:00:00','17:00:00')
     #    current_diff = current_diff * 0.2
-    business_hours = ['8', '17']
+    
     if not is_between(timestamp_hours, business_hours):
         current_diff = current_diff * 0.2
     
