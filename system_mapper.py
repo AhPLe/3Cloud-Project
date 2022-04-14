@@ -6,11 +6,11 @@ import sys
 for line in sys.stdin:
     #mapper
     
-    print(line)
+    #print(line)
     line = line.strip()
     # split the line into words
     system_vars = line.split(',')
-    print(system_vars)
+    #print(system_vars)
     if len(system_vars) > 1 and system_vars[2].isnumeric():
         #order_number = system_vars[]
         timestamp_day = system_vars[0]
@@ -21,7 +21,7 @@ for line in sys.stdin:
         age = system_vars[5]
         bldg = system_vars[6]
         
-        print'%s\t%s\t%s\t%s\t%s\t%s\t%s' % (timestamp_day, timestamp_hours, target_temp, actual_temp, system, age, bldg)
+        print '%s\t%s\t%s\t%s\t%s\t%s\t%s' % (timestamp_day, timestamp_hours, target_temp, actual_temp, system, age, bldg)
     else:
         continue
     
