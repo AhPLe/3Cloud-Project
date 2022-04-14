@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+#TODO: issue sorting, possibly correct calculation
+
 from operator import itemgetter
 import sys
 
