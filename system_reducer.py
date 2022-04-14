@@ -4,7 +4,7 @@ from operator import itemgetter
 import sys
 
 import math
-import pandas as pd
+#import pandas as pd
 
 def is_between(time, time_range):
     hour_time = int(time.split(':')[0])
@@ -52,13 +52,13 @@ for line in sys.stdin:
             
             #print('sys vars', system_vars[5])
             #order_number = system_vars[]
-            timestamp_day = system_vars[1]
-            timestamp_hours = system_vars[2] //pd.Timestamp()
-            target_temp = int(system_vars[3])
-            actual_temp = int(system_vars[4])
-            system = int(system_vars[5])
-            age = int(system_vars[6])
-            bldg = int(system_vars[7])
+            timestamp_day = system_vars[0]
+            timestamp_hours = system_vars[1] #pd.Timestamp()
+            target_temp = int(system_vars[2])
+            actual_temp = int(system_vars[3])
+            system = int(system_vars[4])
+            age = int(system_vars[5])
+            bldg = int(system_vars[6])
             if not initiated:
                 initiated = True
                 testing_sys = system
