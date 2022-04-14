@@ -5,9 +5,8 @@ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar 
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file system_mapper.py -mapper system_mapper.py -file system_reducer.py -reducer system_reducer.py -input CSCI4795input -output py_wc_out_2
 
 last working output:
-hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file system_
-mapper.py -mapper system_mapper.py -file system_reducer.py -reducer system_reducer.py -input HVAC.csv -output py_wc
-_out_5
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file system_mapper.py -mapper system_mapper.py -file system_reducer.py -reducer system_reducer.py -input HVAC.csv -output py_wc_out
+_5
 
 debugging:
 cat CSCI_4795/* | python system_mapper.py | sort | python system_reducer.py 
@@ -17,10 +16,12 @@ original
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file WordCntmapper.py -mapper WordCntmapper.py -file WordCntreducer.py -reducer WordCntreducer.py -input CSCI4795input -output py_wc_out
 
 
+
 py_wc_out_14_1 : successful word count
 py_wc_out_2pm : failed compile
 py_wc_out_255
 py_wc_out_327
+py_wc_out704
 
 
 
