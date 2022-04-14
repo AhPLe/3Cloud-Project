@@ -11,7 +11,7 @@ for line in sys.stdin:
     # split the line into words
     system_vars = line.split(',')
     #print(system_vars)
-    if len(system_vars) > 1 and system_vars[2].isnumeric():
+    if len(system_vars) > 1 and system_vars[2].isdigit():
         #order_number = system_vars[]
         timestamp_day = system_vars[0]
         timestamp_hours = system_vars[1]
