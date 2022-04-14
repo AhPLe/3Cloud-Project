@@ -42,7 +42,7 @@ for line in sys.stdin:
         # continue
     
     #split the varialbes and assign them
-    system_vars = line.split(',')
+    system_vars = line.split('\t')
     
     try:
         if len(system_vars) > 1 and system_vars[3].isnumeric():
