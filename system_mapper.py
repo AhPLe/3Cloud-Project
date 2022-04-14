@@ -14,12 +14,12 @@ for line in sys.stdin:
     if len(system_vars) > 1 and system_vars[2].isnumeric():
         #order_number = system_vars[]
         timestamp_day = system_vars[0]
-        timestamp_hours = pd.Timestamp(system_vars[1])
-        target_temp = int(system_vars[2])
-        actual_temp = int(system_vars[3])
-        system = int(system_vars[4])
-        age = int(system_vars[5])
-        bldg = int(system_vars[6])
+        timestamp_hours = system_vars[1]
+        target_temp = system_vars[2]
+        actual_temp = system_vars[3]
+        system = system_vars[4]
+        age = system_vars[5]
+        bldg = system_vars[6]
         
         print'%s\t%s\t%s\t%s\t%s\t%s\t%s' % (timestamp_day, timestamp_hours, target_temp, actual_temp, system, age, bldg)
     else:
