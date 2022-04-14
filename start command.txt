@@ -1,0 +1,11 @@
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file WordCntmapper.py -mapper WordCntmapper.py -file WordCntreducer.py -reducer WordCntreducer.py -input CSCI4795input -output py_wc_out
+
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file system_mapper.py -mapper system_mapper.py -file system_reducer.py -reducer system_reducer.py -input CSCI4795input -output py_wc_out
+
+
+
+
+original
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file WordCntmapper.py -mapper WordCntmapper.py -file WordCntreducer.py -reducer WordCntreducer.py -input CSCI4795input -output py_wc_out
