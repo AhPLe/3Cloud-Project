@@ -4,27 +4,6 @@ import sys
 
 # input comes from STDIN (standard input)
 for line in sys.stdin:
-    # remove leading and trailing whitespace
-    line = line.strip()
-    # split the line into words
-    words = line.split()
-    # increase counters
-    for word in words:
-        # write the results to STDOUT (standard output);
-        # what we output here will be the input for the
-        # Reduce step, i.e. the input for reducer.py
-        #
-        # tab-delimited; the trivial word count is 1
-        print '%s\t%s' % (word, 1)
-		
-		
-		
-#!/usr/bin/env python
-
-import sys
-
-# input comes from STDIN (standard input)
-for line in sys.stdin:
     #mapper
     
     print(line)
@@ -44,20 +23,5 @@ for line in sys.stdin:
         
         print'%s\t%s\t%s\t%s\t%s\t%s\t%s' % (timestamp_day, timestamp_hours, target_temp, actual_temp, system, age, bldg)
     else:
-        continue
-    
-        TODO: actually go through correct stripping/assigning methods
-    remove leading and trailing whitespace
-    line = line.strip()
-
-    # parse the input we got from mapper.py
-    word, count = line.split('\t', 1)
-
-    # convert count (currently a string) to int
-    try:
-        count = int(count)
-    except ValueError:
-        # count was not a number, so silently
-        # ignore/discard this line
         continue
     
