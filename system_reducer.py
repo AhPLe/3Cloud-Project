@@ -56,7 +56,7 @@ for line in sys.stdin:
             system = int(system_vars[5])
             age = int(system_vars[6])
             bldg = int(system_vars[7])
-            if !initiated:
+            if not initiated:
                 initiated = True
                 testing_sys = system
             
