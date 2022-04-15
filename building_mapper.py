@@ -24,7 +24,7 @@ for line in sys.stdin:
         age = system_vars[5]
         bldg = system_vars[6]
         
-        print '%s\t%s\t%s\t%s\t%s\t%s\t%s' % (bldg, timestamp_day, timestamp_hours, actual_temp, target_temp, system, age)
+        print (f'%s\t%s\t%s\t%s\t%s\t%s\t%s', bldg, timestamp_day, timestamp_hours, actual_temp, target_temp, system, age))
     else:
         continue
     
