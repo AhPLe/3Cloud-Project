@@ -27,9 +27,12 @@ py_wc_out_327
 py_wc_out704
 py_wc_out_754
 py_wc_out_759
+py_wc_out_826 - possibly correct
 
-
-
+worst prints    
+5       10.2857142857
+8       6.63461538462
+10      24.375
 
 arthurlebl@hadoop3:~$ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file system_
 mapper.py -mapper system_mapper.py -file system_reducer.py -reducer system_reducer.py -input HVAC.csv -output py_wc
