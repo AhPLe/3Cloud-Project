@@ -118,18 +118,18 @@ hottest_average = []
 hottest_times = []
 times_measured = False
 for i in range(len(hottest_buildings)):
-    hottest_average.append([hottest_buildings[i], []]
+    hottest_average.append([hottest_buildings[i], []])
     for j in range(len(hottest_buildings[3])):
         #get the average for the current time of day
         current_average = hottest_buildings[3][1][0]/hottest_buildings[3][1][1]
         #append the average to the list
         if not times_measured:
-            hottest_times.append([hottest_buildings[3][0])
+            hottest_times.append(hottest_buildings[3][0])
         hottest_average[i][1].append(current_average)
     times_measured = True
     plt.plot(hottest_times, hottest_average[i][2], label = hottest_average[i][0])
 
-plt.xlabel(f'Time (Business Hour)') #  + pd.Timedelta(days=1) - self.small_interval
+plt.xlabel('Time (Business Hour)') 
 plt.xticks(rotation=-45)
 plt.ylabel('Average Temperature')
 plt.title(f'Average Temperature vs. Time')
