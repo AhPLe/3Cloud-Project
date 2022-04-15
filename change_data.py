@@ -14,13 +14,13 @@ cols = pcsv.columns.tolist()
 
 print(cols)
 #cols = cols[-3:] + cols[:-3]
-num = 4
+num = 6
 cols = cols[num:num + 1] + cols[:num] + cols[num+1:]
 print(cols)
 pcsv = pcsv[cols]
 
-out_file = 'HVAC_sorted_system.csv'
-#pcsv.to_csv(out_file, index = False)
+out_file = 'HVAC_sorted_building.csv'
+pcsv.to_csv(out_file, index = False)
 
 # s = ''
 # with open(out_file) as f:
