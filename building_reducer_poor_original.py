@@ -27,10 +27,9 @@ initiated = False
 
 #print('testing initial system', total_system)
 building_array = [[]]
-total = 0
-bnum = 0
 prev_building = -1
 pos = -1
+
 
 
 for line in sys.stdin:
@@ -70,20 +69,16 @@ for line in sys.stdin:
                 continue
             
             if bldg != prev_building:
-                building_array.append(current_building)
-                prev_building = bldg
                 current_timestamp = pd.Timestamp(timestamp_day, timestamp_hours)
                 current_building = [bldg, total, bnum, {}]
-                total = actual_temp
-                bnum += 1
-                current_building = [[bldg, total, bnum {}]]
+                building_array.append(current_building)
+                prev_building = bldg
                 
                 if current_timestamp in current_building[3]:
                     current_building[current_timestamp] = [actual_temp, 1]
                 else:
                     current_building[current_timestamp][0] += current_building.get(current_timestamp, 0)[0] + actual_temp
                     current_building[current_timestamp][1] += current_building.get(current_timestamp, 0)[1] + 1                    
-                
                 pos = pos + 1
             else:
                 building_array[pos][1] += actual_temp

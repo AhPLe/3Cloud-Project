@@ -7,7 +7,7 @@ import sys
 
 import math
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def is_between(time, time_range):
     hour_time = int(time.split(':')[0])
@@ -137,12 +137,12 @@ for i in range(len(hottest_buildings)):
             hottest_times.append(hottest_buildings[3][0])
         hottest_average[i][1].append(current_average)
     times_measured = True
-    plt.plot(hottest_times, hottest_average[i][2], label = hottest_average[i][0])
+    #plt.plot(hottest_times, hottest_average[i][2], label = hottest_average[i][0])
 
-plt.xlabel('Time (Business Hour)') 
-plt.xticks(rotation=-45)
-plt.ylabel('Average Temperature')
-plt.title('Average Temperature vs. Time')
+# plt.xlabel('Time (Business Hour)') 
+# plt.xticks(rotation=-45)
+# plt.ylabel('Average Temperature')
+# plt.title('Average Temperature vs. Time')
 
-#plt.savefig('APL_plot.pdf') - used for creating 'plot' figure output
-plt.show()
+# #plt.savefig('APL_plot.pdf') - used for creating 'plot' figure output
+# plt.show()
