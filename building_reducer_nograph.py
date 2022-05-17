@@ -73,10 +73,10 @@ for line in sys.stdin:
                 building_array.append(current_building)
                 prev_building = bldg
                 current_timestamp = pd.Timestamp(timestamp_day, timestamp_hours)
-                current_building = [bldg, total, bnum, {}]
                 total = actual_temp
                 bnum += 1
-                current_building = [[bldg, total, bnum {}]]
+                #current_building = [bldg, total, bnum, {}]
+                current_building = [[bldg, total, bnum, {}]]
                 
                 if current_timestamp in current_building[3]:
                     current_building[current_timestamp] = [actual_temp, 1]
